@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-warrior/gulp-browser-serve.git"
+  },
   "author": "Roy Vanegas",
   "license": "ISC",
   "devDependencies": {
