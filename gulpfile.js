@@ -6,11 +6,8 @@ var gulp = require('gulp'),
     browserPref = 'default';
 
 /**
- * CHOOSE A BROWSER OTHER THAN THE DEFAULT
- *
- * The following six tasks set the browser preference variable (browserPref) in
- * the browserSync preferences read by the serve task. To use either of the four
- * browsers when serving this project, invoke Gulp as follows:
+ * To use either of the browsers listed below that match an installed browser on your
+ * machine, invoke Gulp as follows:
  *
  *    gulp safari serve
  *    gulp firefox serve
