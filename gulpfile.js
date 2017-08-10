@@ -66,7 +66,5 @@ gulp.task('serve', function () {
         server: './'
     });
 
-    gulp.watch('./').on('change', reload);
-    gulp.watch('**/*').on('change', reload);
-    gulp.watch('*.*/*').on('change', reload);
+    gulp.watch('./**').on('change', reload); // Match all files in the current directory
 });
