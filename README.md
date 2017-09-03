@@ -20,7 +20,7 @@ Type `gulp serve` and wait a moment. Your default browser will launch in a `loca
 
 ### Usage for Non-default Browsers
 
-To use any of the non-default browsers, type `gulp BROWSER serve`, where `BROWSER` is one of the browsers listed when you type `gulp --tasks`. For example, to use Firefox I’d type `gulp firefox serve`.
+To use any of the non-default browsers, type `gulp BROWSER serve`, where `BROWSER` is one of the browsers listed when you type `gulp --tasks`. To use Firefox, For example, I’d type `gulp firefox serve`.
 
 ## Scaffold
 
