@@ -18,9 +18,9 @@ All the required Node modules need to be installed before you proceed. From the 
 
 Type `gulp serve` and wait a moment. Your default browser will launch in a `localhost` environment that looks for `index.html`. When you’re done, type `ctrl+c`.
 
-### Usage for None-default Browsers
+### Usage for Non-default Browsers
 
-Type `gulp --tasks` to see a list of tasks bound to browsers, including Firefox, Chrome, Opera, Safari, Internet Explorer, and Edge. To use any of the non-default browsers, type `gulp BROWSER serve`, where `BROWSER` is one of the browsers listed when you typed `gulp --tasks`. For example, to use Firefox I’d type `gulp firefox serve`.
+To use any of the non-default browsers, type `gulp BROWSER serve`, where `BROWSER` is one of the browsers listed when you typed `gulp --tasks`. For example, to use Firefox I’d type `gulp firefox serve`.
 
 ## Scaffold
 
