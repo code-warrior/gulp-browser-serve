@@ -1,6 +1,16 @@
 /*jslint node: true */
 
-var gulp = require('gulp'),
+/*
+ * In an effort to keep from installing multiple `node_modules` folders, I sometimes
+ * install `node_modules` in my home folder on a Mac and point to the folder using
+ * the USERNAME and MODULES_PATH constants below. To use this approach, replace
+ * <YOUR_USERNAME> with your computer’s username. And, of course, uncomment the const
+ * variables and the “require” statement.
+*/
+// const USERNAME = '<YOUR_USERNAME>';
+// const MODULES_PATH = '/Users/' + USERNAME + '/node_modules/';
+
+var gulp = require('gulp'), // require(MODULES_PATH + 'gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     browserPref = 'default';
