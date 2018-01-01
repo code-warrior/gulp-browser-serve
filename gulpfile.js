@@ -10,10 +10,10 @@
 // const USERNAME = '<YOUR_USERNAME>';
 // const MODULES_PATH = '/Users/' + USERNAME + '/node_modules/';
 
-var gulp = require('gulp'), // require(MODULES_PATH + 'gulp'),
-    browserSync = require('browser-sync'),
+let gulp = require(`gulp`), // require(MODULES_PATH + 'gulp'),
+    browserSync = require(`browser-sync`),
     reload = browserSync.reload,
-    browserPref = 'default';
+    browserPref = `default`;
 
 /**
  * To use either of the browsers listed below that match an installed browser on your
@@ -27,51 +27,52 @@ var gulp = require('gulp'), // require(MODULES_PATH + 'gulp'),
  *    gulp ie serve
  */
 
-gulp.task('safari', function () {
+gulp.task(`safari`, function () {
     'use strict';
 
-    browserPref = 'safari';
+    browserPref = `safari`;
 });
 
-gulp.task('firefox', function () {
+gulp.task(`firefox`, function () {
     'use strict';
 
-    browserPref = 'firefox';
+    browserPref = `firefox`;
 });
 
-gulp.task('chrome', function () {
+gulp.task(`chrome`, function () {
     'use strict';
 
-    browserPref = 'google chrome';
+    browserPref = `google chrome`;
 });
 
-gulp.task('opera', function () {
+gulp.task(`opera`, function () {
     'use strict';
 
-    browserPref = 'opera';
+    browserPref = `opera`;
 });
 
-gulp.task('edge', function () {
+gulp.task(`edge`, function () {
     'use strict';
 
-    browserPref = 'microsoft-edge';
+    browserPref = `microsoft-edge`;
 });
 
-gulp.task('ie', function () {
+gulp.task(`ie`, function () {
     'use strict';
 
-    browserPref = 'iexplore';
+    browserPref = `iexplore`;
 });
 
-gulp.task('serve', function () {
+gulp.task(`serve`, function () {
     'use strict';
 
     browserSync({
         browser: browserPref,
         notify: true,
         port: 9000,
-        server: './'
+        server: `./`
     });
 
-    gulp.watch('./**').on('change', reload); // Match all files in the current directory
+    // Match all files in the current directory
+    gulp.watch(`./**`).on(`change`, reload);
 });
