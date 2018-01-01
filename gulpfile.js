@@ -1,4 +1,4 @@
-/*jslint node: true */
+/*jslint node: true, single, multivar */
 
 /*
  * In an effort to keep from installing multiple `node_modules` folders, I sometimes
