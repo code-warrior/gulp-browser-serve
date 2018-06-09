@@ -31,3 +31,6 @@ $RECYCLE.BIN/
 
 # Node
 node_modules/
+
+# Ignore temp folder created by Gulp
+temp/
