@@ -11,6 +11,7 @@
 // const MODULES_PATH = '/Users/' + USERNAME + '/node_modules/';
 
 let gulp = require(`gulp`), // require(MODULES_PATH + 'gulp'),
+    babel = require("gulp-babel"),
     browserSync = require(`browser-sync`),
     reload = browserSync.reload,
     browserPref = `default`;
