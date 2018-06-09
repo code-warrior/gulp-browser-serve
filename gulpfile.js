@@ -11,6 +11,7 @@
 // const MODULES_PATH = '/Users/' + USERNAME + '/node_modules/';
 
 let gulp = require(`gulp`), // require(MODULES_PATH + 'gulp'),
+    babel = require("gulp-babel"),
     browserSync = require(`browser-sync`),
     reload = browserSync.reload,
     browserPref = `default`;
@@ -63,6 +64,14 @@ gulp.task(`ie`, function () {
     browserPref = `iexplore`;
 });
 
+gulp.task(`transpileJS`, function () {
+    'use strict';
+
+    return gulp.src(`js/*.js`)
+        .pipe(babel())
+        .pipe(gulp.dest(`temp/js`));
+});
+
 gulp.task(`serve`, function () {
     'use strict';
 
@@ -73,6 +82,12 @@ gulp.task(`serve`, function () {
         server: `./`
     });
 
-    // Match all files in the current directory
-    gulp.watch(`./**`).on(`change`, reload);
+    gulp.watch(`js/*.js`, [`transpileJS`])
+        .on(`change`, reload);
+
+    gulp.watch(`./*.html`)
+        .on(`change`, reload);
+
+    gulp.watch(`./css/*.css`)
+        .on(`change`, reload);
 });
