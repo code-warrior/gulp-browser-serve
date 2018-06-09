@@ -82,6 +82,12 @@ gulp.task(`serve`, function () {
         server: `./`
     });
 
-    // Match all files in the current directory
-    gulp.watch(`./**`).on(`change`, reload);
+    gulp.watch(`js/*.js`, [`transpileJS`])
+        .on(`change`, reload);
+
+    gulp.watch(`./*.html`)
+        .on(`change`, reload);
+
+    gulp.watch(`./css/*.css`)
+        .on(`change`, reload);
 });
