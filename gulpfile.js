@@ -64,6 +64,14 @@ gulp.task(`ie`, function () {
     browserPref = `iexplore`;
 });
 
+gulp.task(`transpileJS`, function () {
+    'use strict';
+
+    return gulp.src(`js/*.js`)
+        .pipe(babel())
+        .pipe(gulp.dest(`temp/js`));
+});
+
 gulp.task(`serve`, function () {
     'use strict';
 
